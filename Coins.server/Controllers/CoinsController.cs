@@ -32,6 +32,7 @@ namespace Coins.server.Controllers
     [HttpGet("GetByid")]
         public ActionResult<CoinDTO> GetById(string id)
         {
+
             if (id == null) { return Unauthorized(); }
             CoinDTO result = _coinsSerice.getID(id);
             if (result == null) { return Unauthorized(); }
